@@ -34,9 +34,9 @@
   apt:
     autoremove: yes
 
-
 - name: Install basic packages
   apt:
+    update_cache: yes
     state: present
     name:
       - vim

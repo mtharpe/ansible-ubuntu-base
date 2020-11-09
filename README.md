@@ -1,4 +1,4 @@
-![Ansible Lint](https://github.com/mtharpe/ansible-terraform-enterprise/workflows/Ansible%20Lint/badge.svg)
+![Ansible Lint](https://github.com/mtharpe/ansible-ubuntu-base/workflows/Ansible%20Lint/badge.svg)
 
 # Description
 

@@ -1,0 +1,5 @@
+---
+- name: wrapper playbook for kitchen testing "terraform_enterpise" role
+  hosts: localhost
+  roles:
+    - ubuntu-18

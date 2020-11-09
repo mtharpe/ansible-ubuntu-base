@@ -1,0 +1,83 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@mtharpe 
+angristan
+/
+ansible-base
+1
+5
+2
+Code
+Issues
+Pull requests
+Actions
+Projects
+1
+Security
+Insights
+ansible-base/templates/etc/logrotate.d/rsyslog.j2
+@angristan
+angristan Fix rsyslog
+Latest commit 37ec741 on Apr 4
+ History
+ 1 contributor
+40 lines (38 sloc)  707 Bytes
+  
+/var/log/syslog
+{
+    rotate 7
+    daily
+    missingok
+    notifempty
+    compress
+    postrotate
+{% if ansible_distribution == 'Ubuntu' or (ansible_distribution == 'Debian' and ansible_distribution_release == 'buster') %}
+        /usr/lib/rsyslog/rsyslog-rotate
+{% else %}
+        invoke-rc.d rsyslog rotate
+{% endif %}
+    endscript
+}
+
+/var/log/mail.info
+/var/log/mail.warn
+/var/log/mail.err
+/var/log/mail.log
+/var/log/daemon.log
+/var/log/kern.log
+/var/log/auth.log
+/var/log/user.log
+/var/log/lpr.log
+/var/log/cron.log
+/var/log/debug
+/var/log/messages
+{
+    rotate 4
+    weekly
+    missingok
+    notifempty
+    compress
+    sharedscripts
+    postrotate
+        invoke-rc.d rsyslog rotate
+    endscript
+}
+
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

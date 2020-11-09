@@ -11,7 +11,7 @@ end
 %w(vim git htop curl wget sudo strace zip unzip
   time apt-utils man-db dnsutils telnet tcpdump
   lsof ca-certificates logrotate rsyslog net-tools).each do |pkg|
-    describe package (pkg) do
+    describe package pkg do
       it { should be_installed }
     end
   end

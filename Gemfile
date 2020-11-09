@@ -1,6 +1,6 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "test-kitchen"
+gem 'test-kitchen'
 gem 'docker'
 gem 'test-kitchen'
 gem 'kitchen-docker'

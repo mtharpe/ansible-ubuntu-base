@@ -15,7 +15,7 @@
     url: https://apt.releases.hashicorp.com/gpg
     state: present
 
-- name: Add HashiCorp sources.list
+- name: Manage sources.list
   template:
     src: 'etc/apt/sources.list.j2'
     dest: '/etc/apt/sources.list'

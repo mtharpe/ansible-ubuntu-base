@@ -24,7 +24,7 @@
 
 - name: Install basic packages
   apt:
-    state: present  
+    state: present
     name:
       - vim
       - git

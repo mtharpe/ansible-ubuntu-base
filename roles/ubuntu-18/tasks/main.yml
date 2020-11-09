@@ -6,7 +6,7 @@
   with_items:
     - en_US.UTF-8
 
-- name: Set timezone to Europe/Paris
+- name: Set timezone to EST
   timezone:
     name: America/New_York
 
@@ -21,6 +21,20 @@
     dest: '/etc/apt/sources.list'
     mode: 0644
   notify: update_apt_cache
+
+- name: Update all packages to their latest version
+  apt:
+    name: "*"
+    state: latest
+
+- name: Remove useless packages from the cache
+  apt:
+    autoclean: yes
+
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes
+
 
 - name: Install basic packages
   apt:

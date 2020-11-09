@@ -46,6 +46,11 @@
       - logrotate
       - rsyslog
       - net-tools
+      - terraform
+      - vault
+      - consul
+      - nomad
+      - waypoint
 
 - name: Add rsyslog logrotate without delaycompress
   template:

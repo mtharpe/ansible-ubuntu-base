@@ -1,3 +1,6 @@
+[![SonarQube](https://github.com/mtharpe/ansible-ubuntu-base/actions/workflows/sonarqube.yml/badge.svg)](https://github.com/mtharpe/ansible-ubuntu-base/actions/workflows/sonarqube.yml)
+
+[![CircleCI](https://circleci.com/gh/mtharpe/ansible-ubuntu-base/tree/master.svg?style=svg)](https://circleci.com/gh/mtharpe/ansible-ubuntu-base/tree/master)
 
 # Description
 
